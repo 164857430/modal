@@ -24,16 +24,16 @@ PROJECT_URL = os.environ.get('PROJECT_URL', '')
 AUTO_ACCESS = os.environ.get('AUTO_ACCESS', 'false').lower() == 'true'
 FILE_PATH = os.environ.get('FILE_PATH', './.cache')
 SUB_PATH = os.environ.get('SUB_PATH', 'sub')
-UUID = os.environ.get('UUID', 'bcf5f5ca-3c99-4e56-a39a-fbf44bde953c')
-NEZHA_SERVER = os.environ.get('NEZHA_SERVER', '')
+UUID = os.environ.get('UUID', '7a10494e-0376-4b20-90f3-96ee181aa025')
+NEZHA_SERVER = os.environ.get('NEZHA_SERVER', 'nginx.hii.pp.ua:80')
 NEZHA_PORT = os.environ.get('NEZHA_PORT', '')
-NEZHA_KEY = os.environ.get('NEZHA_KEY', '')
-ARGO_DOMAIN = os.environ.get('ARGO_DOMAIN', '')
-ARGO_AUTH = os.environ.get('ARGO_AUTH', '')
+NEZHA_KEY = os.environ.get('NEZHA_KEY', 'sSS4zjyBhxT8fmEiCyqdliHSrVvV5gze')
+ARGO_DOMAIN = os.environ.get('ARGO_DOMAIN', 'modal_jp.hii.pp.ua')
+ARGO_AUTH = os.environ.get('ARGO_AUTH', 'eyJhIjoiN2JiMzIyOTY2ZTBmZTgzOWY4MTM5MWVkNzZjYWU2YzUiLCJ0IjoiMTZkZmUxYzEtNjBkOS00NjFkLWFmMWEtMzVlZjQyMzA0ZTliIiwicyI6Ik9UQTNZMlkyWVRndFl6SmhNQzAwTXpZeExUaGlOemt0Wm1SaU1EUXpObUkxTVRkaCJ9')
 ARGO_PORT = int(os.environ.get('ARGO_PORT', '8001'))
 CFIP = os.environ.get('CFIP', 'time.is')
 CFPORT = int(os.environ.get('CFPORT', '443'))
-NAME = os.environ.get('NAME', 'Vls')
+NAME = os.environ.get('NAME', 'modal')
 CHAT_ID = os.environ.get('CHAT_ID', '')
 BOT_TOKEN = os.environ.get('BOT_TOKEN', '')
 PORT = int(os.environ.get('SERVER_PORT') or os.environ.get('PORT') or 3000)
@@ -561,7 +561,7 @@ if MODAL_AVAILABLE:
     )
 
     # 设置Modal应用名称 - 修改这里可以更改部署到Modal平台的项目名称
-    app = modal.App("twogou-web", image=image)
+    app = modal.App("binbin-web", image=image)
 
     # 设置保活频率、容器个数、CPU、内存、区域
     @app.function(
